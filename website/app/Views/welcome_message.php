@@ -97,45 +97,52 @@
 		section .heroe {
 			text-align: center;
 			margin: 0 auto;
-			width: 60%;
+			width: 100%;
 		}
+
+		section .heroe .conference_img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+
 		section .heroe h1 {
 			padding-top: 2%;
-			font-size: 2.5rem;
+			font-size: 4vw;
 			font-weight: 500;
 		}
 		section .heroe h2 {
 			font-size: 1.5rem;
 			font-weight: 300;
+			font-size: 4vw;
 			padding: 0;
+			line-height: 0.9;
 		}
 		section {
 			margin: 0 auto;
-			max-width: 1100px;
+			max-width: 1300px;
 			padding: 2.5rem 1.75rem 3.5rem 1.75rem;
 		}
 
-		section .wtc_info {
-			text-align: center;
-			margin-left: 0%;
-			margin-top: 14%;
-			margin-right: 7%;
-			width: 30%;
-			float: right;
-		}
-
 		section .wtc_info h1 {
-			font-size: 40px;
+			font-size: 2vw;
 		}
 
 		section .wtc_info p {
-			font-size: 20px;
+			font-size: 1vw;
 		}
 
 		section button {
 			margin-top: 7%;
 		}
 
+		section .informations {
+			width: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		/* section h1 {
 			margin-bottom: 2.5rem;
@@ -192,13 +199,42 @@
 			margin-top: 1%;
 		}
 
-		@media (max-width: 1071px) {
+		.wtc_form {
+			max-width: 1100px;
+			background-color: whitesmoke;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 3rem;
+			width: 100%;
+			box-shadow:0 0 20px rgba(202, 195, 195, 1);
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+		.wtc_form .wtc_info {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+			text-align: center;
+			margin-top: 5%;
+		}
+
+		.wtc_form .wtc_info h1 {
+			font-size: 25px;
+			font-weight: 300;
+		}
+
+		.wtc_form .form-group {
+			margin-bottom: 2%;
+		}
+
+		@media (max-width: 885px) {
 			section .wtc_info {
 				width: 300px;
+				align-self:center;
 				background-color: yellow;
-			}
-			.conference_img {
-				align-self: center;
 			}
 		}
 
@@ -231,9 +267,6 @@
 			}
 		}
 
-		.conference_img {
-			align-self: start;
-		}
 	</style>
 </head>
 <body>
@@ -292,15 +325,9 @@
 <section>
 
 	<div class="heroe">
-		<h1>Willkommen bei der WTC</h1>
+		<h1>Willkommen bei der</h1>
 		<h2>webconia Technology Conference</h2>
 		<img class="conference_img" src="https://i.ibb.co/pjxstZn/conference.png">
-	</div>
-
-	<div class="wtc_info">
-		<h1>Hier für die WTC einschreiben</h1>
-		<p>Klicken sie hier, um sich für die WTC einzuschreiben.</p>
-		<button type="button" class="btn btn-primary" onclick="this.blur();">Einschreiben</button>
 	</div>
 
 	<!-- <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
@@ -319,33 +346,60 @@
 
 	<section>
 
-		<h1>Themen, über die wir reden</h1>
+		<div class="informations">
+			<h1>Themen, über die wir reden</h1>
 
-		<h2>
-			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect x='32' y='96' width='64' height='368' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><line x1='112' y1='224' x2='240' y2='224' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><line x1='112' y1='400' x2='240' y2='400' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><rect x='112' y='160' width='128' height='304' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><rect x='256' y='48' width='96' height='416' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><path d='M422.46,96.11l-40.4,4.25c-11.12,1.17-19.18,11.57-17.93,23.1l34.92,321.59c1.26,11.53,11.37,20,22.49,18.84l40.4-4.25c11.12-1.17,19.18-11.57,17.93-23.1L445,115C443.69,103.42,433.58,94.94,422.46,96.11Z' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/></svg>
-			Flutter
-		</h2>
+			<h2>
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect x='32' y='96' width='64' height='368' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><line x1='112' y1='224' x2='240' y2='224' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><line x1='112' y1='400' x2='240' y2='400' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><rect x='112' y='160' width='128' height='304' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><rect x='256' y='48' width='96' height='416' rx='16' ry='16' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/><path d='M422.46,96.11l-40.4,4.25c-11.12,1.17-19.18,11.57-17.93,23.1l34.92,321.59c1.26,11.53,11.37,20,22.49,18.84l40.4-4.25c11.12-1.17,19.18-11.57,17.93-23.1L445,115C443.69,103.42,433.58,94.94,422.46,96.11Z' style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px'/></svg>
+				Flutter
+			</h2>
 
-		<p>Folgende Sachen werden besprochen: Was ist Flutter?, warum Flutter?, das Setup von Flutter, 
-			die Flutter Architektur, Hot Reload in Flutte und die Vorstellung von Dart.</p>
+			<p>Folgende Sachen werden besprochen: Was ist Flutter?, warum Flutter?, das Setup von Flutter, 
+				die Flutter Architektur, Hot Reload in Flutte und die Vorstellung von Dart.</p>
 
-		<h2>
-			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg>
-			Gewalt freie Kommunikation
-		</h2>
+			<h2>
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg>
+				Gewalt freie Kommunikation
+			</h2>
 
-		<p>In der genannten Konferenz werden Themen wie Agenda, Was ist eigentlich gewaltfreie Kommunikation, Warum fällt es 
-			uns schwer gewaltfrei zu kommunizieren?, Weil wir bewerten und nicht beobachten besprochen.</p>
+			<p>In der genannten Konferenz werden Themen wie Agenda, Was ist eigentlich gewaltfreie Kommunikation, Warum fällt es 
+				uns schwer gewaltfrei zu kommunizieren?, Weil wir bewerten und nicht beobachten besprochen.</p>
 
-		<h2>
-			 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><line x1='176' y1='48' x2='336' y2='48' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><line x1='118' y1='304' x2='394' y2='304' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M208,48v93.48a64.09,64.09,0,0,1-9.88,34.18L73.21,373.49C48.4,412.78,76.63,464,123.08,464H388.92c46.45,0,74.68-51.22,49.87-90.51L313.87,175.66A64.09,64.09,0,0,1,304,141.48V48' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg>
-			 Entwickllung des Mobilen Internets
-		</h2>
+			<h2>
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><line x1='176' y1='48' x2='336' y2='48' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><line x1='118' y1='304' x2='394' y2='304' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M208,48v93.48a64.09,64.09,0,0,1-9.88,34.18L73.21,373.49C48.4,412.78,76.63,464,123.08,464H388.92c46.45,0,74.68-51.22,49.87-90.51L313.87,175.66A64.09,64.09,0,0,1,304,141.48V48' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg>
+				Entwickllung des Mobilen Internets
+			</h2>
 
-		<p>In der Konferenz werde Sachen wie die allgemeine Nutzung von Desktop und Mobilem Internet, Entwicklung des Onlinehandels,
-			Smartphone Nutzung,  E-Commerce Umsatz nach Plattform, Umsatz Onlline nach Branche, und Zufriedenheit angesprochen.</p>
+			<p>In der Konferenz werde Sachen wie die allgemeine Nutzung von Desktop und Mobilem Internet, Entwicklung des Onlinehandels,
+				Smartphone Nutzung,  E-Commerce Umsatz nach Plattform, Umsatz Onlline nach Branche, und Zufriedenheit angesprochen.</p>
+		</div>
 
 	</section>
+
+	<form class="wtc_form">
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Vorname</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Vorname">
+		</div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Nachname</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nachname">
+		</div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">E-Mail</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-Mail">
+		</div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Firma</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Firma">
+		</div>
+
+		<div class="wtc_info">
+			<h1>Hier für die webconia Technology Conference einschreiben</h1>
+			<p>Klicken sie hier, um sich für die webconia Technology Conference einzuschreiben.</p>
+			<button type="button" class="btn btn-primary" onclick="this.blur();">Einsenden</button>
+		</div>
+	</form>	
 
 </div>
 
