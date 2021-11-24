@@ -1,0 +1,21 @@
+.diagnostics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: aqua;
+}
+
+.diagnostics .diagnostics_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.diagnostics .informations {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;   
+}

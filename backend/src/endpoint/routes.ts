@@ -11,18 +11,32 @@ router.get("/", (req, res) => {
   });
 });
 
+router.post('/api', (request, response) => {
+  const data = request.body;
+  response.json(data);
+  console.log(data);
+});
+
 router.post("/register", async (req, res) => {
-  const { firstName, lastName, email, company, name } = req.body;
+  const { firstName, lastName, email, company} = req.body;
 
   const conference = await Conference.findOne({
-    where: { name: name },
+    where: { name: 'Java-Konferenz' },
     relations: ["customerToConferenceRelation"],
   });
 
+  console.log("-----------------");
+  console.log("USERS EMAIL: " + email);
+  
+
   if (conference === undefined) {
-    res.json({ message: "Could not find conference with name " + name });
+    res.json({ message: "Could not find conference with name " + 'Java-Konferenz' });
     return;
   } else if (!(await checkIfCustomerAlreadyRegistered(email, conference))) {
+
+    console.log("USER NOT REGISTERED!");
+    
+
     const customer = await Customer.create({
       firstName: firstName,
       lastName: lastName,
@@ -35,8 +49,11 @@ router.post("/register", async (req, res) => {
       customerId: customer.id,
     }).save();
 
+    console.log("-----------------");
     return res.json(customer);
   } else {
+    console.log("USER CREATES!");
+    console.log("-----------------");
     return res.json({ message: "Already registered for that conference!" });
   }
 });

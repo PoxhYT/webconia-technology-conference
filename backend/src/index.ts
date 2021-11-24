@@ -21,6 +21,7 @@ async function main() {
   const app = express();
 
   app.use(helmet());
+  app.use(express.static('website/app'));
   app.use(express.json());
   app.use(cors());
   app.use(router);
@@ -39,8 +40,7 @@ const connect = async () => {
         host: url,
         database: "webconia-projekt",
         entities: [Customer, Conference, CustomerToConferenceRelation],
-        synchronize: true,
-        logging: true
+        synchronize: true
     });
 };
 
