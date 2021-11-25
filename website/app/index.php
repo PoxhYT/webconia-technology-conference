@@ -7,6 +7,7 @@
 	<meta name="description" content="The small framework with powerful features">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 	<!-- STYLES -->
 
@@ -68,34 +69,34 @@
 
 		.section-customers {
 			margin: 0 auto;
-			max-width: 1000px;
+			max-width: 1100px;
+			background-color: whitesmoke;
+			box-shadow: 0 0 20px rgba(202, 195, 195, 1);
+			border-radius: 5px;
+			margin-top: 5%;
+			margin-bottom: 5%;
 		}
 
 		.section-customers .diagnostics {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			background-color: aqua;
-		}
-
-		.section-customers .diagnostics .diagnostics_img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
 		}
 
 		.section-customers .diagnostics .informations {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			width: 100%;
+			text-align: center;
+			font-size: .85vw;
+			width: 50%;
 		}
 
 		.section-customers .table {
 			border-radius: 5px;
-			box-shadow: 0 0 5px 5px rgba(242, 242, 242, 1);
-			font-size: 1vw;
+			font-size: 1.8vw;
+			font-weight: bold;
+			background-color: white;
 		}
 
 
@@ -232,25 +233,57 @@
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			width: 60%;
+			width: 100%;
 			text-align: center;
 			margin-top: 5%;
 		}
 
 		.wtc_form .wtc_info h1 {
-			font-size: 25px;
 			font-weight: 300;
+			font-size: 2vw;
 		}
 
 		.wtc_form .form-group {
 			margin-bottom: 2%;
 		}
 
+		footer {
+			background-color: rgba(221, 72, 20, .8);
+			text-align: center;
+		}
+
+		footer .copyrights {
+			background-color: rgba(62, 62, 62, 1);
+			color: rgba(200, 200, 200, 1);
+			padding: .25rem 1.75rem;
+		}
+
+		footer .copyrights p {
+			margin-top: 1%;
+		}
+
+		@media (min-width: 1600px) {
+			.section-customers .table {
+				border-radius: 5px;
+				font-size: 1vw;
+				background-color: white;
+			}
+		}
+
 		@media (max-width: 885px) {
-			section .wtc_info {
-				width: 300px;
-				align-self: center;
-				background-color: yellow;
+			.wtc_form .wtc_info h1 {
+				font-weight: 600;
+				font-size: 4vw;
+			}
+
+			.section-customers .diagnostics .informations {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				font-weight: 600;
+				font-size: 4vw;
+				width: 100%;
 			}
 		}
 
@@ -302,24 +335,6 @@
 			<a class="navbar-brand mt-2 mt-lg-0" href="#">
 				<img src="https://i.ibb.co/CvkrfkP/imageedit-8-7371663928.png" height="70" alt="" loading="lazy" />
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="/customers">Einschreiben <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Team <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Über uns <span class="sr-only">(current)</span></a>
-					</li>
-				</ul>
-
-			</div>
 		</nav>
 	</header>
 
@@ -373,7 +388,7 @@
 						<line x1='118' y1='304' x2='394' y2='304' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px' />
 						<path d='M208,48v93.48a64.09,64.09,0,0,1-9.88,34.18L73.21,373.49C48.4,412.78,76.63,464,123.08,464H388.92c46.45,0,74.68-51.22,49.87-90.51L313.87,175.66A64.09,64.09,0,0,1,304,141.48V48' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px' />
 					</svg>
-					Entwickllung des Mobilen Internets
+					Entwicklung des Mobilen Internets
 				</h2>
 
 				<p>In der Konferenz werde Sachen wie die allgemeine Nutzung von Desktop und Mobilem Internet, Entwicklung des Onlinehandels,
@@ -382,52 +397,56 @@
 
 		</section>
 
-		<form action="/" class="wtc_form">
+		<form id="form" action="/" class="wtc_form">
 			<div class="form-group">
 				<label for="exampleFormControlInput1">Vorname</label>
-				<input type="text" class="form-control" id="firstName" placeholder="Vorname">
+				<input type="text" class="form-control" id="firstName" placeholder="Vorname" autocomplete="FALSE">
 			</div>
 			<div class="form-group">
 				<label for="exampleFormControlInput1">Nachname</label>
-				<input type="text" class="form-control" id="lastName" placeholder="Nachname">
+				<input type="text" class="form-control" id="lastName" placeholder="Nachname" autocomplete="FALSE">
 			</div>
 			<div class="form-group">
 				<label for="exampleFormControlInput1">E-Mail</label>
-				<input type="email" class="form-control" id="email" placeholder="E-Mail">
+				<input type="email" class="form-control" id="email" placeholder="E-Mail" autocomplete="FALSE">
 			</div>
 			<div class="form-group">
 				<label for="exampleFormControlInput1">Firma</label>
-				<input type="text" class="form-control" id="company" placeholder="Firma">
+				<input type="text" class="form-control" id="company" placeholder="Firma" autocomplete="FALSE">
 			</div>
 
 			<div class="wtc_info">
-				<h1>Hier für die webconia Technology Conference einschreiben</h1>
-				<p>Klicken sie hier, um sich für die webconia Technology Conference einzuschreiben.</p>
-				<button id="button-post" class="btn btn-primary" onclick="return false;">Absenden</button>
+				<h1>Hier für die webconia technology conference einschreiben</h1>
+				<p>Klicken sie hier, um sich für die webconia technology conference einzuschreiben.</p>
+				<button id="button-post" class="btn btn-primary">Absenden</button>
 			</div>
 		</form>
+	</div>
 
-		<div class="d-flex justify-content-center">
-			<div class="spinner-border" role="status" id="loading">
-				<span class="sr-only"></span>
+	<section class="section-customers">
+
+		<div class="diagnostics">
+			<div class="informations">
+				<p>Hier können sie alle Kunden aufrufen, die sich bereits für die webconia Technology Conference eingeschrieben haben.</p>
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="spinner-border" role="status" id="loading">
+					<span class="sr-only"></span>
+				</div>
 			</div>
 		</div>
 
-		<section class="section-customers">
+		<div class="customers">
+			<table id="customer" class="table"></table>
+		</div>
 
-			<div class="customers">
-				<table id="customer" class="table"></table>
-			</div>
+	</section>
 
-			<div class="diagnostics">
-				<div class="informations">
-					<img class="diagnostics_img" src="https://i.ibb.co/mN0kDQB/undraw-Segment-analysis-re-ocsl.png">
-					<p>Hier können sie alle Kunden aufren, die sich bereits für die webconia Technology Conference eingeschrieben haben.</p>
-				</div>
-			</div>
-		</section>
-
-	</div>
+	<footer>
+		<div class="copyrights">
+			<p>© 1999 – 2021 webconia GmbH</p>
+		</div>
+	</footer>
 
 	<script>
 		function toggleMenu() {
@@ -438,27 +457,10 @@
 			}
 		}
 
-		// const button = document.getElementById("submit");
-		// button.addEventListener("click", async (event) => {
-		// 	const data = {
-		// 		firstName: "Niko",
-		// 		lastName: "Schmidt",
-		// 		email: "a.schmidt@gmail.com",
-		// 		company: "n GmbH",
-		// 	};
-
-		// 	const options = {
-		// 		method: "POST",
-		// 		headers: {
-		// 			"Content-Type": "application/json",
-		// 		},
-		// 		body: JSON.stringify(data),
-		// 	};
-
-		// 	const response = await fetch("http://localhost:5000/register", options);
-		// 	const json = await response.json();
-		// 	console.log(json);
-		// });
+		const firstName = document.getElementById("firstName");
+		const lastName = document.getElementById("lastName");
+		const email = document.getElementById("email");
+		const company = document.getElementById("company");
 
 		const button = document.getElementById("button-post");
 		button.addEventListener("click", async (event) => {
@@ -490,19 +492,26 @@
 				},
 				body: JSON.stringify(data),
 			};
+			
+			const response = await fetch("https://backend-webconia-technology-conference/.netlify/functions/app/register", options);
 
-			const response = await fetch("http://localhost:5000/register", options);
-			const json = await response.json();
-			console.log(json);
-			event.preventDefault();
-
+			if (response) {
+				const json = await response.json();
+				console.log(json);
+				event.preventDefault();
+				alert('Sie haben sich nun für die webconia technology conference eingeschrieben');
+			} else {
+				alert('Aktuell sind die server leider nicht erreichbar versuchen sie es später erneut!');
+				event.preventDefault();
+				return false;
+			}
 		});
 	</script>
 
 	<script>
 		// api url
 		const api_url =
-			"http://localhost:5000/customers/Java-Konferenz";
+			"https://backend-webconia-technology-conference/.netlify/functions/app/customers/Java-Konferenz";
 
 		// Defining async function
 		async function getapi(url) {
